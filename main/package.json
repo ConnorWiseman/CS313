@@ -4,5 +4,8 @@
   "private": true,
   "description": "",
   "author": "Connor Wiseman",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "^10.11.0"
+  }
 }
