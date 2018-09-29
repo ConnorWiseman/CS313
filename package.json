@@ -1,0 +1,19 @@
+{
+  "name": "cs313-ta",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Connor Wiseman",
+  "license": "MIT",
+  "homepage": "https://github.com/ConnorWiseman/cs313-ta#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConnorWiseman/cs313-ta.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ConnorWiseman/cs313-ta/issues"
+  },
+  "scripts": {
+    "push": "git push origin master",
+    "push:main": "git subtree push --prefix main main master"
+  }
+}

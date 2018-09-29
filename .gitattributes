@@ -1,0 +1,3 @@
+main/**/*.js linguist-detectable=true
+nodejs/**/*.js linguist-detectable=true
+php/**/*.php linguist-detectable=true
