@@ -13,7 +13,7 @@
     "url": "https://github.com/ConnorWiseman/cs313-ta/issues"
   },
   "scripts": {
-    "push": "git push origin master",
+    "push": "git push origin master && npm run push:main && npm run push:nodejs && npm run push:php",
     "push:main": "git subtree push --prefix main main master",
     "push:nodejs": "git subtree push --prefix nodejs nodejs master",
     "push:php": "git subtree push --prefix php php master"
