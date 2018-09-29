@@ -7,5 +7,10 @@
   "license": "MIT",
   "engines": {
     "node": "^10.11.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "path": "^0.12.7"
   }
 }
