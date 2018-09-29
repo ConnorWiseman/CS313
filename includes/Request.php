@@ -15,7 +15,7 @@ final class Request extends ReflectionObject {
     private function getReferrer() {
       if (isset($_SERVER["HTTP_REFERER"])) {
         $referrer = $_SERVER["HTTP_REFERER"];
-        mb_convert_encoding($referrer, 'UTF-8', 'UTF-8');
+        \mb_convert_encoding($referrer, 'UTF-8', 'UTF-8');
         return htmlentities($referrer, ENT_QUOTES, 'UTF-8');
       }
 
