@@ -14,6 +14,7 @@
   },
   "scripts": {
     "push": "git push origin master",
-    "push:main": "git subtree push --prefix main main master"
+    "push:main": "git subtree push --prefix main main master",
+    "push:nodejs": "git subtree push --prefix nodejs nodejs master"
   }
 }
