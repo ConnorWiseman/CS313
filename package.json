@@ -14,8 +14,8 @@
   },
   "scripts": {
     "push": "git push origin master && npm run push:main && npm run push:nodejs && npm run push:php",
-    "push:main": "git subtree push --prefix main main master",
-    "push:nodejs": "git subtree push --prefix nodejs nodejs master",
-    "push:php": "git subtree push --prefix php php master"
+    "push:main": "git subtree push --prefix main main master && git subtree split --prefix main --rejoin",
+    "push:nodejs": "git subtree push --prefix nodejs nodejs master && git subtree split --prefix nodejs --rejoin",
+    "push:php": "git subtree push --prefix php php master && git subtree split --prefix php --rejoin"
   }
 }
