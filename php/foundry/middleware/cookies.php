@@ -1,6 +1,6 @@
 <?php
 
-require_once('/foundry/includes/CookiesHandler.php');
+require_once('../includes/CookiesHandler.php');
 
 $cookies = function(Foundry\Context $ctx, \Closure $next) {
   $ctx->cookies = new Foundry\CookiesHandler;
