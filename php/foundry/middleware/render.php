@@ -1,7 +1,7 @@
 <?php
 
-require_once('../includes/Context.php');
-require_once('../includes/TemplateRenderer.php');
+require_once(__DIR__ . '../includes/Context.php');
+require_once(__DIR__ . '../includes/TemplateRenderer.php');
 
 $render = function(Array $options = Array()) {
   $options = array_merge(Array(
@@ -22,7 +22,7 @@ $render = function(Array $options = Array()) {
       $ctx->res->header('Content-Type: text/html; charset=utf-8');
       $ctx->res->send($txt);
     };
-    
+
     return $next();
   };
 };
