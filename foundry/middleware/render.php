@@ -1,7 +1,7 @@
 <?php
 
-require_once(__DIR__ . '../includes/Context.php');
-require_once(__DIR__ . '../includes/TemplateRenderer.php');
+require_once('/app/foundry/includes/Context.php');
+require_once('/app/foundry/includes/TemplateRenderer.php');
 
 $render = function(Array $options = Array()) {
   $options = array_merge(Array(
