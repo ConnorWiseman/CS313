@@ -13,9 +13,9 @@ final class CookiesHandler {
   }
 
   public function set($name, $value,
-                    $expires = 0, $path = '/',
-                    $domain = '', $secure = FALSE,
-                    $httpOnly = TRUE) {
+                      $expires = 0, $path = '/',
+                      $domain = '', $secure = FALSE,
+                      $httpOnly = TRUE) {
     return setcookie($name, $value, $expires, $path, $domain, $secure, $httpOnly);
   }
 }

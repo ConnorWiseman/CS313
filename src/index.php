@@ -3,12 +3,12 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 require_once('../foundry/includes/Application.php');
-require_once('../foundry/middleware/cookies.php');
-require_once('../foundry/middleware/db.php');
-require_once('../foundry/middleware/filters.php');
+// require_once('../foundry/middleware/cookies.php');
+// require_once('../foundry/middleware/db.php');
+// require_once('../foundry/middleware/filters.php');
 require_once('../foundry/middleware/render.php');
 require_once('../foundry/middleware/router.php');
-require_once('../foundry/middleware/session.php');
+// require_once('../foundry/middleware/session.php');
 
 $dbconfig = Array(
   'prefix'  => 'pgsql',
@@ -34,7 +34,7 @@ $app = new Foundry\Application;
 
 // $app->apply($db($dbconfig));
 // $app->apply($filters);
-$app->apply($cookies);
+// $app->apply($cookies);
 // $app->apply($session);
 $app->apply($render());
 $app->apply($router([
