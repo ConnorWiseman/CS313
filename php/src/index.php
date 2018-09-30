@@ -2,13 +2,13 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once('/app/foundry/foundry/includes/Application.php');
-// require_once('/app/foundry/foundry/middleware/cookies.php');
-// require_once('/app/foundry/foundry/middleware/db.php');
-// require_once('/app/foundry/foundry/middleware/filters.php');
-require_once('/app/foundry/foundry/middleware/render.php');
-require_once('/app/foundry/foundry/middleware/router.php');
-// require_once('/app/foundry/foundry/middleware/session.php');
+require_once('/app/foundry/includes/Application.php');
+// require_once('/app/foundry/middleware/cookies.php');
+// require_once('/app/foundry/middleware/db.php');
+// require_once('/app/foundry/middleware/filters.php');
+require_once('/app/foundry/middleware/render.php');
+require_once('/app/foundry/middleware/router.php');
+// require_once('/app/foundry/middleware/session.php');
 
 $dbconfig = Array(
   'prefix'  => 'pgsql',
