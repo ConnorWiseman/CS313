@@ -3,7 +3,7 @@
 require_once('../includes/Context.php');
 require_once('../includes/Router.php');
 
-$router = function(Array $options = Array()) {
+$router = function(Array $routes = Array(), Array $options = Array()) {
 
     // Require routes here, for the sake of correct scoping without `use`.
     require_once('../routes/get/index.php');
@@ -23,8 +23,12 @@ $router = function(Array $options = Array()) {
     };
 
     $instance = new Foundry\Router;
-    $instance
-      ->get('/', $getIndex);
+
+    foreach($routes as $method => $middleware) {
+      foreach($middleware as $path, $handler) {
+        call_user_func_array(Array($instance, $method), Array($path, $handler));
+      }
+    }
 
     return function(Foundry\Context $ctx, \Closure $next) use($instance) {
         $instance->handleRequest($ctx);
