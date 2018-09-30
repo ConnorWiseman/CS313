@@ -7,7 +7,7 @@ $render = function(Array $options = Array()) {
   $options = array_merge(Array(
     'layoutsDir'    => '/layouts',
     'partialsDir'   => '/partials',
-    'templatesPath' => realpath(__DIR__ . '/../templates'),
+    'templatesPath' => realpath(__DIR__ . '/../../templates'),
     'viewsDir'      => '/views'
   ), $options);
 
