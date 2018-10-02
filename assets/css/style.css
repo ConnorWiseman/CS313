@@ -138,7 +138,7 @@ aside .accent-text {
 }
 
 .example + .example h3 {
-  margin-top: calc(2 * var(--spacing));
+  margin-top: calc(3 * var(--spacing));
 }
 
 .preferred h3 {
