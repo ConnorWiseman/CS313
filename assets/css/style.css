@@ -79,6 +79,18 @@ main article:nth-child(odd) {
   background-color: var(--color-gray-lite);
 }
 
+code {
+  background-color: var(--color-gray-code);
+  border-radius: 0.125em;
+  font-family: 'Source Code Pro', 'Courier', monospace;
+  font-size: 0.9em;
+  font-style: normal;
+  hyphens: none;
+  margin: 0 0.125em;
+  padding: 0 0.25em;
+  white-space: nowrap;
+}
+
 aside {
   border-bottom: 0.0125em solid var(--color-gray-dark);
   border-top: 0.0125em solid var(--color-gray-dark);
@@ -122,7 +134,7 @@ aside .accent-text {
 
 .example h3 {
   border-radius: 0.25em;
-  padding: var(--spacing);
+  padding: calc(var(--spacing) / 2);
 }
 
 .preferred h3 {
