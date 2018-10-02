@@ -82,10 +82,9 @@ main article:nth-child(odd) {
 pre {
   background-color: var(--color-gray-code);
   border-radius: 0.125em;
-  margin-bottom: calc(2 * var(--spacing));
-  margin-left: var(--spacing);
-  margin-right: var(--spacing);
-  margin-top: calc(2 * var(--spacing));
+  margin: calc(2 * var(--spacing));
+  margin-left: calc(var(--spacing) / 2);
+  margin-right: calc(var(--spacing) / 2);
   padding: var(--spacing);
 }
 
