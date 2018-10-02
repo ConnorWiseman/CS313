@@ -79,13 +79,29 @@ main article:nth-child(odd) {
   background-color: var(--color-gray-lite);
 }
 
-code {
+pre {
   background-color: var(--color-gray-code);
   border-radius: 0.125em;
+  margin: calc(2 * var(--spacing));
+  padding: var(--spacing);
+}
+
+code {
   font-family: 'Source Code Pro', 'Courier', monospace;
   font-size: 0.9em;
   font-style: normal;
   hyphens: none;
+}
+
+pre code {
+  display: block;
+  max-height: 350px;
+  overflow: auto;
+}
+
+p code {
+  background-color: var(--color-gray-code);
+  border-radius: 0.125em;
   margin: 0 0.125em;
   padding: 0 0.25em;
   white-space: nowrap;
