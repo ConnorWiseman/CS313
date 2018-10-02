@@ -137,6 +137,10 @@ aside .accent-text {
   padding: calc(var(--spacing) / 2);
 }
 
+.example + .example h3 {
+  margin-top: calc(2 * var(--spacing));
+}
+
 .preferred h3 {
   background-color: #dff2bf;
   color: #4f8a10;
