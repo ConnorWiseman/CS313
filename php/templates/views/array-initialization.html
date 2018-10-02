@@ -1,0 +1,47 @@
+<article id="array-initialization">
+  <div class="width-wrapper">
+    <header>
+      <h2>Array Initialization</h2>
+      <p class="accent-text">Ways to initialize an empty Array.</p>
+    </header>
+
+    <div class="preferred">
+      <h3>Preferred</h3>
+
+      <pre><code>$array = [];</code></pre>
+
+      <p>The most concise way of initializing an empty Array. Explicit and safe
+        to use as of PHP 5.4.</p>
+    </div>
+
+    <div class="acceptable">
+      <h3>Acceptable</h3>
+
+      <pre><code>$array = array();</code></pre>
+
+      <p><code>array()</code> is a language construct in PHP, not a constructor,
+        so it isn't called with the <code>new</code> key word. PHP's language
+        constructs are case-insensitive. In this case, they're also more verbose
+        than the Array literal syntax with square brackets.</p>
+    </div>
+
+    <div class="avoid">
+      <h3>Avoid</h3>
+
+      <pre><code>$array = (array) null;</code></pre>
+
+      <p>Coercing <code>null</code> into an Array will yield an empty Array, but
+        the syntax is awkward and not easily recognized. At the same time, there
+        is no benefit to this approach. Avoid using.</p>
+    </div>
+
+    <div class="anti-pattern">
+      <h3>Anti-pattern</h3>
+
+      <pre><code>$array[] = /* first value here */;</code></pre>
+
+      <p>Using direct bracket assignment syntax to initialize an Array with its
+        first value is not a safe operation. If the given Array already exists,
+    </div>
+  </div>
+</article>

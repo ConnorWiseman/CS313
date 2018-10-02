@@ -50,6 +50,9 @@ $app->apply($router([
   'get' => [
     '/' => function($ctx, $next) {
       $ctx->res->render('index', $ctx->state);
+    },
+    '/array-initialization' => function($ctx, $next) {
+      $ctx->res->rendeR('array-initialization', $ctx->state);
     }
   ]
 ]));
