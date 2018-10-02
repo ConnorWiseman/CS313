@@ -37,10 +37,19 @@ $app = new Foundry\Application;
 // $app->apply($cookies);
 // $app->apply($session);
 $app->apply($render());
+$app->apply(function($ctx, $next) {
+  $ctx->state = array(
+    'appTitle'       => 'CS313 - Web Engineering II',
+    'appDescription' => 'Practical PHP examples.',
+    'appThemeColor'  => '#22b222'
+  );
+
+  $next();
+});
 $app->apply($router([
   'get' => [
     '/' => function($ctx, $next) {
-      $ctx->res->render('index');
+      $ctx->res->render('index', $ctx->state);
     }
   ]
 ]));

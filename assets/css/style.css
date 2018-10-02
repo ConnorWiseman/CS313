@@ -1,3 +1,151 @@
-body {
+:root {
+  --color-php-dark: #4f5b93;
+  --color-php-lite: #8892bf;
+  --color-node-dark: #34582d;
+  --color-node-lite: #6ebc49;
+  --color-gray-accent: #787878;
+  --color-gray-code: #eaeaea;
+  --color-gray-dark: #d6d6d6;
+  --color-gray-text: #232323;
+  --color-gray-lite: #fafafa;
+  --color-green-primary: #22b222;
+  --spacing: 1.5em;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+* + * {
+  margin-top: var(--spacing);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
   line-height: 1.5;
+}
+
+body {
+  color: var(--color-gray-text);
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  margin: 0;
+}
+
+a:link, a:visited, a:active {
+  color: var(--color-green-primary);
+  text-decoration: none;
+  transition: color 250ms ease;
+}
+
+a:hover {
+  color: var(--color-gray-dark);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Libre Baskerville', 'Georgia', serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+ol {
+  margin: var(--spacing);
+}
+
+ol li,
+ul li {
+  margin: 0;
+}
+
+main article:nth-child(odd) {
+  background-color: var(--color-gray-lite);
+}
+
+aside {
+  border-bottom: 0.0125em solid var(--color-gray-dark);
+  border-top: 0.0125em solid var(--color-gray-dark);
+  margin-bottom: calc(2 * var(--spacing));
+  margin-top: calc(2 * var(--spacing));
+  margin-left: calc(1.5 * var(--spacing));
+  margin-right: calc(1.5 * var(--spacing));
+  text-align: center;
+}
+
+aside .accent-text {
+  margin-bottom: var(--spacing);
+}
+
+.width-wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: var(--spacing);
+  width: 100%;
+}
+
+.accent-text {
+  color: var(--color-gray-accent);
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.two-columns {
+  column-count: 2;
+  column-gap: var(--spacing);
+}
+
+.padded {
+  padding: var(--spacing);
+}
+
+.larger {
+  font-size: 1.25em;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  ol {
+    margin: inherit;
+  }
+
+  .larger {
+    font-size: 1.125em;
+  }
+
+  .two-columns {
+    columns: 1;
+  }
 }
