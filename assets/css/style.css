@@ -120,6 +120,30 @@ aside .accent-text {
   font-size: 1.25em;
 }
 
+.preferred h3 {
+  background-color: #dff2bf;
+  border-radius: 0.25em;
+  color: #4f8a10;
+}
+
+.acceptable h3 {
+  background-color: #bde5f8;
+  border-radius: 0.25em;
+  color: #00529b;
+}
+
+.avoid h3 {
+  background-color: #feefb3;
+  border-radius: 0.25em;
+  color: #9f6000;
+}
+
+.anti-pattern h3 {
+  background-color: #ffd2d2;
+  border-radius: 0.25em;
+  color: #d8000c;
+}
+
 @media only screen and (max-width: 600px) {
   html {
     font-size: 14px;
