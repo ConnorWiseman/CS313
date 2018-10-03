@@ -1,0 +1,36 @@
+<article id="associative-array-contains">
+  <div class="width-wrapper">
+    <header>
+      <h2>Associative Array Contains</h2>
+      <p class="accent-text">Ways to determine if an associative Array contains a key-value pair.</p>
+    </header>
+
+    <div class="example preferred">
+      <h3>Preferred</h3>
+
+      <pre><code>array_key_exists('one', $array);</code></pre>
+
+      <p>The <code>array_key_exists</code> function returns <code>true</code> if
+        a given key exists in an associative Array.</p>
+    </div>
+
+    <div class="example acceptable">
+      <h3>Acceptable</h3>
+
+      <pre><code>key_exists('one', $array);</code></pre>
+
+      <p>The <code>key_exists</code> function is an alias for <code>array_key_exists</code>.
+        For consistency's sake, favor the former.</p>
+    </div>
+
+    <div class="example avoid">
+      <h3>Avoid</h3>
+
+      <pre><code>array_search('one', array_keys($array)) !== false;</code></pre>
+
+      <p><code>array_search</code> will return the key of the given value
+        in an associative Array if found, and <code>false</code> if not found.
+        Performing an extra comparison is additional, unnecessary cognitive overhead.
+        Just use <code>array_key_exists</code>.</p>
+    </div>
+</article>
