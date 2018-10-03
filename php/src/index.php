@@ -51,6 +51,9 @@ $app->apply($router([
     '/' => function($ctx, $next) {
       $ctx->res->render('index', $ctx->state);
     },
+    '/array-contains' => function($ctx, $next) {
+      $ctx->res->render('array-contains', $ctx->state);
+    },
     '/array-initialization' => function($ctx, $next) {
       $ctx->res->render('array-initialization', $ctx->state);
     },

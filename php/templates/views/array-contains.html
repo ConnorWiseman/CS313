@@ -1,0 +1,29 @@
+<article id="array-contains">
+  <div class="width-wrapper">
+    <header>
+      <h2>Array Contains</h2>
+      <p class="accent-text">Ways to determine if an Array contains a value.</p>
+    </header>
+
+    <div class="example preferred">
+      <h3>Preferred</h3>
+
+      <pre><code>in_array(1, $array, true);</code></pre>
+
+      <p>The <code>in_array</code> function returns <code>true</code> if a
+        given value exists in an Array. The final parameter determines which
+        type comparison to use; always favor <code>true</code> for strict
+        type comparison.</p>
+    </div>
+
+    <div class="example avoid">
+      <h3>Avoid</h3>
+
+      <pre><code>array_search(1, $array, true) !== false;</code></pre>
+
+      <p><code>array_search</code> will return the index of the given value
+        in an Array if found, and <code>false</code> if not found. Performing
+        an extra comparison is additional, unnecessary cognitive overhead.
+        Just use <code>in_array</code>.</p>
+    </div>
+</article>
