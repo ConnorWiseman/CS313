@@ -1,0 +1,101 @@
+<article id="control-structures">
+  <div class="width-wrapper">
+    <header>
+      <h2>Control Structures</h2>
+      <p class="accent-text">PHP's control structures.</p>
+    </header>
+
+    <div class="example">
+      <h3><code>if</code> statement</h3>
+
+      <pre><code>if (/* condition */) {
+  // logic if condition is true
+}</code></pre>
+    </div>
+
+    <div class="example">
+      <h3><code>if</code>/<code>else</code> statement</h3>
+
+      <pre><code>if (/* condition */) {
+  // logic if condition is true
+} else {
+  // logic if condition is false
+}</code></pre>
+    </div>
+
+    <div class="example">
+      <h3><code>if</code>/<code>else if</code>/<code>else</code> statement</h3>
+
+      <pre><code>if (/* condition one */) {
+  // logic if condition one is true
+} else if (/* condition two */) {
+  // logic if condition one is false but condition two is true
+} else {
+  // logic if neither condition one nor condition two are true
+}</code></pre>
+    </div>
+
+    <div class="example">
+      <h3><code>switch</code> statement</h3>
+
+      <pre><code>switch(/* value */) {
+        case 'one':
+          // logic to perform if value is 'one'
+          break; // break from switch after logic is through
+        case 'two':
+        case 'three':
+          // switch supports fallthrough:
+          // logic to perform if value is either 'two' or 'three'
+          break;
+        default:
+          // logic to perform is no case statement matches the value
+      }</code></pre>
+    </div>
+
+    <div class="example">
+      <h3><code>for</code> loop</h3>
+
+      <pre><code>for ($i = 0; $i < 5; $i++) {
+  // initialize iteratior variable $i to zero
+  // increment $i after each loop
+  // execute loop repeatedly until the condition $i < 5 evaluates to false
+}</code></pre>
+    </div>
+
+    <div class="example">
+      <h3><code>foreach</code> loop</h3>
+
+      <pre><code>foreach($array as $element) {
+  // logic to perform with every element in an Array
+}</code></pre>
+    </div>
+
+    <div class="example">
+      <h3><code>while</code> loop</h3>
+
+      <pre><code>while (/* condition */) {
+  // logic to execute repeatedly while condition is true
+}</code>
+    </div>
+
+    <div class="example">
+      <h3><code>do... while</code> loop</h3>
+
+      <pre><code>do {
+  // logic to execute repeatedly while condition is true
+} while (/* condition */);</code>
+
+      <p>The primary difference between the <code>while</code> loop and the
+        <code>do... while</code> loop is that <code>do... while</code> will
+        <em>always</em> execute at least once, since the condition is not
+        evaluated until after loop execution.
+    </div>
+
+    <div class="example do-not-use">
+      <h3>Do not use</h3>
+
+      <p>PHP, being PHP, has introduced awkward and completely unnecessary
+        <a href="http://php.net/manual/en/control-structures.alternative-syntax.php">alternative
+        syntax</a> for its control structures. Never use it.</p>
+    </div>
+</article>

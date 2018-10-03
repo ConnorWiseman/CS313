@@ -174,7 +174,8 @@ aside .accent-text {
   color: #9f6000;
 }
 
-.anti-pattern h3 {
+.anti-pattern h3,
+.do-not-use h3 {
   background-color: #ffd2d2;
   color: #d8000c;
 }
