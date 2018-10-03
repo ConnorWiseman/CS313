@@ -65,6 +65,9 @@ $app->apply($router([
     },
     '/array-push' => function($ctx, $next) {
       $ctx->res->render('array-push', $ctx->state);
+    },
+    '/associative-array-initialization' => function($ctx, $next) {
+      $ctx->res->render('associative-array-initialization', $ctx->state);
     }
   ]
 ]));

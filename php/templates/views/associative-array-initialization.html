@@ -1,0 +1,45 @@
+<article id="associative-array-initialization">
+  <div class="width-wrapper">
+    <header>
+      <h2>Associative Array Initialization</h2>
+      <p class="accent-text">Ways to initialize an associative Array.</p>
+    </header>
+
+    <div class="example preferred">
+      <h3>Preferred</h3>
+
+      <pre><code>$array = [
+  'key' => 'value'
+];</code></pre>
+
+      <p>The most concise way of initializing an associative Array. Explicit and
+        safe to use as of PHP 5.4.</p>
+    </div>
+
+    <div class="example acceptable">
+      <h3>Acceptable</h3>
+
+      <pre><code>$array = array(
+  'key' => 'value'
+);</code></pre>
+
+      <p><code>array()</code> is a language construct in PHP, not a constructor,
+        so it isn't called with the <code>new</code> key word. PHP's language
+        constructs are case-insensitive. In this case, they're also more verbose
+        than the associative Array literal syntax with square brackets.</p>
+    </div>
+
+    <div class="example anti-pattern">
+      <h3>Anti-pattern</h3>
+
+      <pre><code>$array[/* first key here */] = /* first value here */;</code></pre>
+
+      <p>Using direct bracket assignment syntax to initialize an associative
+        Array with its first value is not a safe operation. If the given
+        associative Array already exists, this will simply create a new key-value
+        pair on the existing associative Array or, worse, add an associative Array
+        key to an ordinary zero-indexed Array. More often than not, that behavior
+        is <em>not</em> desired.</p>
+    </div>
+  </div>
+</article>
