@@ -46,19 +46,4 @@ $array[2] = 3;</code></pre>
         like arbitrarily changing the Array length to accomodate the final
         index. Do <em>not</em> do this.</p>
     </div>
-
-    <div class="example anti-pattern">
-      <h3>Anti-pattern</h3>
-
-      <pre><code>$array = [ 1, 2, 3 ];
-
-array_map(function($element) {
-  // $element
-  // not possible to access index through `array_map()`
-}, $array);</code></pre>
-
-      <p>Using <code>array_map</code> to iterate over an Array is a misuse of
-        the function. Furthermore, it is impossible to access the Array index
-        through <code>array_map</code>. There are better alternatives.</p>
-    </div>
 </article>
