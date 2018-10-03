@@ -1,0 +1,36 @@
+<article id="array-length">
+  <div class="width-wrapper">
+    <header>
+      <h2>Array Length</h2>
+      <p class="accent-text">Ways to count the number of elements in an Array.</p>
+    </header>
+
+    <div class="example preferred">
+      <h3>Preferred</h3>
+
+      <pre><code>count($array);</code></pre>
+
+      <p>The <code>count</code> function returns the number of elements in an
+        Array. Simple, straightforward.</p>
+    </div>
+
+    <div class="example avoid">
+      <h3>Avoid</h3>
+
+      <pre><code>sizeof($array);</code></pre>
+
+      <p><code>sizeof</code> is a PHP alias for <code>count</code>, but carries
+        unfortunate implications for developers with a background in C or C-like
+        languages. Just use <code>count</code>.</p>
+    </div>
+
+    <div class="example anti-pattern">
+      <h3>Anti-pattern</h3>
+
+      <pre><code>new ArrayObject($array)->count();</code></pre>
+
+      <p><code>ArrayObject</code> is a useful wrapper class for iterating over
+        objects that are not already like Arrays. Using it on an Array is
+        pointless.</p>
+    </div>
+</article>
