@@ -53,7 +53,7 @@ $app->apply($router([
     },
     '/array-initialization' => function($ctx, $next) {
       $ctx->res->render('array-initialization', $ctx->state);
-    }
+    },
     '/array-iteration' => function($ctx, $next) {
       $ctx->res->render('array-iteration', $ctx->state);
     }
