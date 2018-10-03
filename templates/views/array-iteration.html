@@ -1,0 +1,85 @@
+<article id="array-iteration">
+  <div class="width-wrapper">
+    <header>
+      <h2>Array Iteration</h2>
+      <p class="accent-text">Ways to iterate over every element in an Array.</p>
+    </header>
+
+    <div class="example preferred">
+      <h3>Preferred</h3>
+
+      <pre><code>$array = [ 1, 2, 3 ];
+
+foreach($array as $element) {
+  // $element
+}
+
+foreach($array as $index => $element) {
+  // $index; $element
+}</code></pre>
+
+      <p>The <code>foreach</code> control structure is the most straightforward
+        way to iterate over an Array.</p>
+    </div>
+
+    <div class="example avoid">
+      <h3>Avoid</h3>
+
+      <pre><code>$array = [ 1, 2, 3 ];
+
+for ($i = 0; $i < count($array); $i++) {
+  // $i; $array[$i]
+}</code></pre>
+
+      <p>The traditional <code>for</code> loop confers no advantage over using
+        <code>foreach</code>, but includes the additional cognitive overhead of
+        accessing the underlying Array through index notation to access the
+        current value of the Array. Prefer <code>foreach</code>.</p>
+    </div>
+
+    <div class="example avoid">
+      <h3>Avoid</h3>
+
+      <pre><code>$array = [ 1, 2, 3 ];
+
+array_walk($array, function(&amp;$element, $index) {
+  // $index; $element
+});</code></pre>
+
+      <p>Using <code>array_walk</code> to iterate over an Array has its uses,
+        but for most cases it is a poor fit. In order to modify
+        <code>$element</code>, it must be passed by reference&mdash;note the
+        <code>&amp;</code> preceding it in the function signature.</p>
+    </div>
+
+    <div class="example anti-pattern">
+      <h3>Anti-pattern</h3>
+
+      <pre><code>$array = [ 1, 2, 3 ];
+
+$it = new ArrayObject($array)->getIterator();
+while($it->valid()) {
+  // $it->key(); $it->current()
+  $it->next();
+}</code></pre>
+
+      <p><code>ArrayObject</code> is a useful wrapper class for iterating over
+        objects that are not already like Arrays. Using it on an Array is
+        pointless.</p>
+    </div>
+
+    <div class="example anti-pattern">
+      <h3>Anti-pattern</h3>
+
+      <pre><code>$array = [ 1, 2, 3 ];
+
+array_map(function($element) {
+  // $element
+  // not possible to access index through `array_map()`
+}, $array);</code></pre>
+
+      <p>Using <code>array_map</code> to iterate over an Array is a misuse of
+        the function. Furthermore, it is impossible to access the Array index
+        through <code>array_map</code>. There are better alternatives.</p>
+    </div>
+</article>
