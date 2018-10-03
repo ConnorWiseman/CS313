@@ -74,6 +74,9 @@ $app->apply($router([
     },
     '/associative-array-iteration' => function($ctx, $next) {
       $ctx->res->render('associative-array-iteration', $ctx->state);
+    },
+    '/control-structures' => function($ctx, $next) {
+      $ctx->res->render('control-structures', $ctx->state);
     }
   ]
 ]));
