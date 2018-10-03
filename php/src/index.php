@@ -56,6 +56,9 @@ $app->apply($router([
     },
     '/array-iteration' => function($ctx, $next) {
       $ctx->res->render('array-iteration', $ctx->state);
+    },
+    '/array-push' => function($ctx, $next) {
+      $ctx->res->render('array-push', $ctx->state);
     }
   ]
 ]));

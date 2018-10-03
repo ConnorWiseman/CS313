@@ -1,0 +1,64 @@
+<article id="array-push">
+  <div class="width-wrapper">
+    <header>
+      <h2>Array Push</h2>
+      <p class="accent-text">Ways to push an element onto the end of an Array.</p>
+    </header>
+
+    <div class="example preferred">
+      <h3>Preferred</h3>
+
+      <pre><code>array_push($array, 1, 2, 3);</code></pre>
+
+      <p>The <code>array_push</code> function can push multiple values onto a
+        given Array and is therefore the most concise and versatile option.</p>
+    </div>
+
+    <div class="example acceptable">
+      <h3>Acceptable</h3>
+
+      <pre><code>$array[] = 1;
+$array[] = 2;
+$array[] = 3;</code></pre>
+
+      <p>Using implicit Array assignment syntax is an acceptable alternative if
+        and only if the Array already exists.</p>
+    </div>
+
+    <div class="example avoid">
+      <h3>Avoid</h3>
+
+      <pre><code>$array = $array + [ 1, 2, 3 ];</code></pre>
+
+      <p>Arrays can be concatenated to one another with the <code>+</code>
+        operator, but this is unsuitable for pushing single values onto an
+        Array and is not as explicit as <code>array_push</code>.</p>
+    </div>
+
+    <div class="example anti-pattern">
+      <h3>Anti-pattern</h3>
+
+      <pre><code>$array[0] = 1;
+$array[1] = 2;
+$array[2] = 3;</code></pre>
+
+      <p>Directly assigning to Array indices introduces unwanted side effects,
+        like arbitrarily changing the Array length to accomodate the final
+        index. Do <em>not</em> do this.</p>
+    </div>
+
+    <div class="example anti-pattern">
+      <h3>Anti-pattern</h3>
+
+      <pre><code>$array = [ 1, 2, 3 ];
+
+array_map(function($element) {
+  // $element
+  // not possible to access index through `array_map()`
+}, $array);</code></pre>
+
+      <p>Using <code>array_map</code> to iterate over an Array is a misuse of
+        the function. Furthermore, it is impossible to access the Array index
+        through <code>array_map</code>. There are better alternatives.</p>
+    </div>
+</article>
