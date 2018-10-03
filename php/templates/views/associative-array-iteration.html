@@ -1,0 +1,87 @@
+<article id="associative-array-iteration">
+  <div class="width-wrapper">
+    <header>
+      <h2>Associative Array Iteration</h2>
+      <p class="accent-text">Ways to iterate over every key-value pair in an associative Array.</p>
+    </header>
+
+    <div class="example preferred">
+      <h3>Preferred</h3>
+
+      <pre><code>$array = [
+  'one' => 1,
+  'two' => 2,
+  'three' => 3
+];
+
+foreach($array as $value) {
+  // $value
+}
+
+foreach($array as $key => $value) {
+  // $key; $value
+}</code></pre>
+
+      <p>The <code>foreach</code> control structure is the most straightforward
+        way to iterate over an associative Array.</p>
+    </div>
+
+    <div class="example avoid">
+      <h3>Avoid</h3>
+
+      <pre><code>$array = [
+  'one' => 1,
+  'two' => 2,
+  'three' => 3
+];
+
+array_walk($array, function(&amp;$value, $key) {
+  // $key; $value
+});</code></pre>
+
+      <p>Using <code>array_walk</code> to iterate over an associative Array has
+        its uses, but for most cases it is a poor fit. In order to modify
+        <code>$value</code>, it must be passed by reference&mdash;note the
+        <code>&amp;</code> preceding it in the function signature.</p>
+    </div>
+
+    <div class="example anti-pattern">
+      <h3>Anti-pattern</h3>
+
+      <pre><code>$array = [
+  'one' => 1,
+  'two' => 2,
+  'three' => 3
+];
+
+$it = new ArrayObject($array)->getIterator();
+while($it->valid()) {
+  // $it->key(); $it->current()
+  $it->next();
+}</code></pre>
+
+      <p><code>ArrayObject</code> is a useful wrapper class for iterating over
+        objects that are not already like Arrays. Using it on an associative
+        Array is pointless.</p>
+    </div>
+
+    <div class="example anti-pattern">
+      <h3>Anti-pattern</h3>
+
+      <pre><code>$array = [
+  'one' => 1,
+  'two' => 2,
+  'three' => 3
+];
+
+array_map(function($value) {
+  // $value
+  // not possible to access key through `array_map()`
+}, $array);</code></pre>
+
+      <p>Using <code>array_map</code> to iterate over an associative Array is a
+        misuse of the function. Furthermore, it is impossible to access the
+        associative Array key through <code>array_map</code>. There are better
+        alternatives.</p>
+    </div>
+</article>
