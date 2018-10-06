@@ -1,0 +1,20 @@
+<article id="session-superglobal">
+  <div class="width-wrapper">
+    <header>
+      <h2><code>$_SESSION</code></h2>
+      <p class="accent-text">The session superglobal.</p>
+    </header>
+
+    <aside>
+      <h4>By The Way</h4>
+      <p class="accent-text">All of PHP's superglobals are implemented as
+        <a href="/#associative-arrays">Associative Arrays</a>.</p>
+    </aside>
+
+    <p>The session superglobal is a set of data provided for PHP scripts by PHP
+      itself. It is accessible only after starting a session.</p>
+
+    <pre><code>session_start();
+
+$_SESSION['key'] = 'value';</code></pre>
+</article>

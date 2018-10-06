@@ -83,6 +83,9 @@ $app->apply($router([
     },
     '/higher-order-functions' => function($ctx, $next) {
       $ctx->res->render('higher-order-functions', $ctx->state);
+    },
+    '/session-superglobal' => function($ctx, $next) {
+      $ctx->res->render('session-superglobal', $ctx->state);
     }
   ]
 ]));
