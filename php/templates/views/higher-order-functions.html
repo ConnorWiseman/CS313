@@ -63,10 +63,6 @@ allInts($product, 1, 2, 3, 4); // 24</code></pre>
 };
 
 function product(int $carry, int $item) : int {
-  if ($carry === 0) {
-    return $item;
-  }
-
   return $carry * $item;
 };
 
@@ -78,7 +74,7 @@ function adder() {
 
 function multiplier() {
   return function(int ...$n) {
-    return array_reduce($n, 'product', 0);
+    return array_reduce($n, 'product', 1);
   };
 };
 
