@@ -35,14 +35,12 @@ foreach($array as $key => $value) {
   'three' => 3
 ];
 
-array_walk($array, function(&amp;$value, $key) {
+array_walk($array, function($value, $key) {
   // $key; $value
 });</code></pre>
 
       <p>Using <code>array_walk</code> to iterate over an associative Array has
-        its uses, but for most cases it is a poor fit. In order to modify
-        <code>$value</code>, it must be passed by reference&mdash;note the
-        <code>&amp;</code> preceding it in the function signature.</p>
+        its uses, but for most cases it is a poor fit.</p>
     </div>
 
     <div class="example anti-pattern">
