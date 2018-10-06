@@ -145,6 +145,12 @@ aside .accent-text {
   column-gap: var(--spacing);
 }
 
+.two-columns li {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
 .padded {
   padding: var(--spacing);
 }
