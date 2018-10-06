@@ -149,7 +149,7 @@ aside .accent-text {
 }
 
 .columns.three {
-  column-count: 2;
+  column-count: 3;
 }
 
 .columns ol,
@@ -222,7 +222,8 @@ aside .accent-text {
     font-size: 1.125em;
   }
 
-  .two-columns {
+  .two,
+  .three {
     columns: 1;
   }
 }
