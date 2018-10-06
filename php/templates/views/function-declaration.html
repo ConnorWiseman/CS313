@@ -59,7 +59,10 @@
 
       <p>The rest operator <code>...</code> (called the "splat" operator in
         languages like Ruby) is used to describe variadic arguments in function
-        definitions. The function above takes none, one, or many arguments.</p>
+        definitions. The function above takes none, one, or many arguments and
+        makes use of <code>array_reduce()</code>
+        (<a href="http://php.net/manual/en/function.array-reduce.php">PHP Docs</a>)
+        to return the sum of all arguments.</p>
 
       <pre><code>addInts(); // 0
 addInts(1); // 1
