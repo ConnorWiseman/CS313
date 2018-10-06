@@ -36,6 +36,8 @@ function allInts(Closure $fn, int ...$n) : int {
 };
 
 allInts($sum, 1, 2, 3); // 6
+allInts($sum, 1, 2, 3, 4); // 10
+allInts($product, 1, 2, 3); // 6</code></pre>
 allInts($product, 1, 2, 3, 4); // 24</code></pre>
 
       <p><code>array_reduce()</code> is one of PHP's higher-order functions;
@@ -45,5 +47,61 @@ allInts($product, 1, 2, 3, 4); // 24</code></pre>
       <p>By letting programmers pass functions in to provide their own behavior,
         <code>allInts()</code> and <code>array_reduce()</code> become much more
         flexible.</p>
+
+      <aside>
+        <h4>By The Way</h4>
+        <p class="accent-text">The <code>$product</code> closure defined above
+          contains a serious logical flaw. Can you find it?</p>
+      </aside>
+    </div>
+
+    <div class="example">
+      <h3><code>adder()</code> &amp; <code>multiplier</code></h3>
+
+      <pre><code>function sum(int $carry, int $item) : int {
+  return $carry + $item;
+};
+
+function product(int $carry, int $item) : int {
+  if ($carry === 0) {
+    return $item;
+  }
+
+  return $carry * $item;
+};
+
+function adder() {
+  return function(int ...$n) {
+    return array_reduce($n, 'sum', 0);
+  };
+};
+
+function multiplier() {
+  return function(int ...$n) {
+    return array_reduce($n, 'product', 0);
+  };
+};
+
+$myAdder = adder();
+
+$myAdder(1, 2, 3); // 6
+$myAdder(1, 2, 3, 4); // 10
+
+$myMultiplier = multiplier();
+
+$myMultiplier(1, 2, 3); // 6
+$myMultiplier(1, 2, 3, 4); // 24</code></pre>
+
+      <p><code>adder()</code> and <code>multiplier()</code> are both higher-order
+        functions: they each return a function with predefined behavior.</p>
+
+      <p>By defining functions that return other functions, programmers may isolate
+        core functionality from potential side-effects by limiting what other users
+        can accomplish with their code. Alternatively, programmers may compose
+        advanced functionality from smaller moving parts.</p>
+
+      <p>If a user wishes to use either <code>sum()</code> or <code>product()</code>
+        without their respective higher-order wrappers, they have that option.
+        Higher-order functions make code more reusable.</p>
     </div>
 </article>
