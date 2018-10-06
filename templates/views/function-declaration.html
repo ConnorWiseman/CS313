@@ -1,0 +1,69 @@
+<article id="function-declaration">
+  <div class="width-wrapper">
+    <header>
+      <h2>Function Declaration</h2>
+      <p class="accent-text">Ways to define your own functions.</p>
+    </header>
+
+    <aside>
+      <h4>By The Way</h4>
+      <p class="accent-text">In PHP, function and class definitions are almost
+        always placed in global scope. This can cause issues when including the
+        same file more than once.</a></p>
+    </aside>
+
+    <div class="example">
+      <h3>Anonymous Function</h3>
+
+      <pre><code>function() {
+  // an anonymous function
+};</code></pre>
+
+      <p>Anonymous functions are functions that have no name. They're usually
+        passed to other functions as arguments or assigned to variables to enable
+        use, because anonymous functions cannot be executed on their own (outside
+        the immediately-invoked function expression pattern).</p>
+    </div>
+
+    <div class="example">
+      <h3>Named Function</h3>
+
+      <pre><code>function returnsTrue() {
+  return true;
+};</code></pre>
+    </div>
+
+    <div class="example">
+      <h3>PHP7 Type Hinting</h3>
+
+      <pre><code>function returnsTrue() : bool {
+  return true;
+};</code></pre>
+
+      <pre><code>function repeatAfterMe(string $str) : string {
+  return $str;
+};</code></pre>
+
+      <p>PHP7 permits type hinting of function parameters and return types. If you
+        are working in PHP7, you may as well take advantage of this feature.</p>
+    </div>
+
+    <div class="example">
+      <h3>Rest/"splat" operator</h3>
+
+      <pre><code>function addInts(int ...$n) : int {
+  return array_reduce($n, function(int $carry, int $item) : int {
+    return $carry + $item;
+  }, 0);
+};</code></pre>
+
+      <p>The rest operator <code>...</code> (called the "splat" operator in
+        languages like Ruby) is used to describe variadic arguments in function
+        definitions. The function above takes none, one, or many arguments.</p>
+
+      <pre><code>addInts(); // 0
+addInts(1); // 1
+addInts(1, 2); // 3
+addInts(1, 2, 3); //6</code></pre>
+    </div>
+</article>

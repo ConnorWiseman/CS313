@@ -77,6 +77,9 @@ $app->apply($router([
     },
     '/control-structures' => function($ctx, $next) {
       $ctx->res->render('control-structures', $ctx->state);
+    },
+    '/function-declaration' => function($ctx, $next) {
+      $ctx->res->render('function-declaration', $ctx->state);
     }
   ]
 ]));
