@@ -1,0 +1,37 @@
+<article id="associative-array-remove-value">
+  <div class="width-wrapper">
+    <header>
+      <h2>Associative Array Remove Value</h2>
+      <p class="accent-text">Ways to remove key-value pairs from an associative Array.</p>
+    </header>
+
+    <div class="example preferred">
+      <h3>Preferred</h3>
+
+      <pre><code>$array = [
+  'key' => 'value'
+];
+
+unset($array['key']);</code></pre>
+
+      <p>The <code>unset()</code> function will remove a key from an associative Array.</p>
+    </div>
+
+    <div class="example avoid">
+      <h3>Avoid</h3>
+
+      <pre><code>$array = [
+  'key' => 'value'
+];
+
+$array = array_diff($array, [
+  'value'
+]);</code></pre>
+
+      <p><code>array_diff()</code> is a function that returns all the elements in
+        the first Array whose value does not exist in any of the other Arrays.
+        <code>array_diff()</code> can remove multiple key-value pairs from an
+        associative Array, so do not use it unless your use case specifically
+        requires it.</p>
+    </div>
+</article>
