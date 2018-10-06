@@ -80,6 +80,9 @@ $app->apply($router([
     },
     '/function-declaration' => function($ctx, $next) {
       $ctx->res->render('function-declaration', $ctx->state);
+    },
+    '/higher-order-functions' => function($ctx, $next) {
+      $ctx->res->render('higher-order-functions', $ctx->state);
     }
   ]
 ]));
