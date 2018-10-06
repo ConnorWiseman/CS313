@@ -101,6 +101,7 @@ pre code {
   overflow: auto;
 }
 
+h3 code,
 p code {
   background-color: var(--color-gray-code);
   border-radius: 0.125em;
