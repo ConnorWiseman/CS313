@@ -223,8 +223,8 @@ aside .accent-text {
     font-size: 1.125em;
   }
 
-  .two,
-  .three {
+  .columns.two,
+  .columns.three {
     columns: 1;
   }
 }
