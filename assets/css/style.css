@@ -144,6 +144,10 @@ aside .accent-text {
   column-gap: var(--spacing);
 }
 
+.columns h3:first-of-type {
+  margin-top: 0;
+}
+
 .columns.two {
   column-count: 2;
 }
