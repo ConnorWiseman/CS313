@@ -75,6 +75,12 @@ $app->apply($router([
     '/associative-array-iteration' => function($ctx, $next) {
       $ctx->res->render('associative-array-iteration', $ctx->state);
     },
+    '/associative-array-remove-value' => function($ctx, $next) {
+      $ctx->res->render('associative-array-remove-value', $ctx->state);
+    },
+    '/associative-array-set-value' => function($ctx, $next) {
+      $ctx->res->render('associative-array-set-value', $ctx->state);
+    },
     '/control-structures' => function($ctx, $next) {
       $ctx->res->render('control-structures', $ctx->state);
     },
