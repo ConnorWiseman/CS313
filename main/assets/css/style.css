@@ -110,11 +110,12 @@ aside .accent-text {
 .two-columns {
   column-count: 2;
   column-gap: var(--spacing);
+}
+
+.two-columns li {
   -webkit-column-break-inside: avoid;
-  -moz-column-break-inside: avoid;
-  -o-column-break-inside: avoid;
-  -ms-column-break-inside: avoid;
-  column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .padded {
