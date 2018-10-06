@@ -1,0 +1,49 @@
+<article id="higher-order-functions">
+  <div class="width-wrapper">
+    <header>
+      <h2>Higher-order Functions</h2>
+      <p class="accent-text">Functions are first-class objects in PHP.</p>
+    </header>
+
+    <p>A higher-order function is a function that meets either of the following
+      criteria:</p>
+
+    <ul>
+      <li>accepts another function as a parameter</li>
+      <li>returns a function</li>
+    </ul>
+
+    <p>Higher-order functions enable functional composition, a way of reusing
+      functions to accomplish similar tasks.</p>
+
+    <div class="example">
+      <h3><code>allInts()</code> &amp; <code>array_reduce()</code></h3>
+
+      <pre><code>$sum = function(int $carry, int $item) : int {
+  return $carry + $item;
+};
+
+$product = function(int $carry, int $item) : int {
+  if ($carry === 0) {
+    return $item;
+  }
+
+  return $carry * $item;
+};
+
+function allInts(Closure $fn, int ...$n) : int {
+  return array_reduce($n, $fn, 0);
+};
+
+allInts($sum, 1, 2, 3); // 6
+allInts($product, 1, 2, 3, 4); // 24</code></pre>
+
+      <p><code>array_reduce()</code> is one of PHP's higher-order functions;
+        <code>allInts()</code> is a custom higher-order function. Each of these
+        accepts another function as a parameter.</p>
+
+      <p>By letting programmers pass functions in to provide their own behavior,
+        <code>allInts()</code> and <code>array_reduce()</code> become much more
+        flexible.</p>
+    </div>
+</article>
