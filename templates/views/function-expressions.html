@@ -1,0 +1,54 @@
+<article id="function-expressions">
+  <div class="width-wrapper">
+    <header>
+      <h2>Function Expressions</h2>
+      <p class="accent-text">Expressions that evaluates to a function.</p>
+    </header>
+
+    <aside>
+      <h4>By The Way</h4>
+      <p class="accent-text">Function expressions were touched on briefly in
+        the <a href="/function-declaration#anonymous-function">Function
+        Declaration</a> section.</p>
+    </aside>
+
+    <p>An expression is any amount of PHP that evaluates to produce a value. The
+      simplest PHP expressions are literal values:</p>
+
+    <pre><code>1;
+'Hello, world!';
+(1);
+('Hello, world!');</code></pre>
+
+    <p>None of the above expressions are particularly useful unless assigned to
+      a variable:</p>
+
+    <pre><code>$myInt = 1;
+$myString = 'Hello, world!';
+$anotherInt = (1);
+$anotherString = ('Hello, world!');</code></pre>
+
+    <div class="example">
+      <h3>Anonymous Function Expression</h3>
+
+      <pre><code>$myFunc = function() {
+  // an anonymous function
+};
+
+$myFunc();</code></pre>
+    </div>
+
+    <div class="example">
+      <h3>Immediately Invoked Function Expression</h3>
+
+      <pre><code>$var = (function() {
+  // an anonymous function executed immediately
+})();</code></pre>
+
+      <p>The <abbr title="immediately invoked function expression">IIFE</abbr>
+        pattern is especially useful in PHP for maintaining some semblance of
+        scope with regards to functions not intended for exposure as part of a
+        program's public API.</p>
+    </div>
+  </div>
+</article>

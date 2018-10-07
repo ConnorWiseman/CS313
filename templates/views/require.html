@@ -1,0 +1,29 @@
+<article id="require">
+  <div class="width-wrapper">
+    <header>
+      <h2>Require</h2>
+      <p class="accent-text">Ways to modularize PHP code.</p>
+    </header>
+
+    <p>If a given script file cannot be found, <code>include</code> will continue
+      script execution with a warning, but <code>require</code> will cause a fatal
+      error. If your program cannot continue in the absence of a particular file,
+      prefer <code>require</code> over <code>include</code>.
+
+    <div class="example">
+      <h3><code>require</code></h3>
+
+      <pre><code>require 'myFile.php';</code></pre>
+    </div>
+
+    <div class="example">
+      <h3><code>require_once</code></h3>
+
+      <pre><code>require_once 'myFile.php';</code></pre>
+
+      <p><code>require_once</code> will only require the target file if it has
+        not already been required in the current scope. This behavior is useful
+        for scripts that define functions.</p>
+    </div>
+  </div>
+</article>

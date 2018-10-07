@@ -87,8 +87,17 @@ $app->apply($router([
     '/function-declaration' => function($ctx, $next) {
       $ctx->res->render('function-declaration', $ctx->state);
     },
+    '/function-expressions' => function($ctx, $next) {
+      $ctx->res->render('function-expressions', $ctx->state);
+    },
     '/higher-order-functions' => function($ctx, $next) {
       $ctx->res->render('higher-order-functions', $ctx->state);
+    },
+    '/include' => function($ctx, $next) {
+      $ctx->res->render('include', $ctx->state);
+    },
+    '/require' => function($ctx, $next) {
+      $ctx->res->render('require', $ctx->state);
     },
     '/session-superglobal' => function($ctx, $next) {
       $ctx->res->render('session-superglobal', $ctx->state);
