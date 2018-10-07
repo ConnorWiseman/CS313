@@ -5,6 +5,12 @@
       <p class="accent-text">Ways to modularize PHP code.</p>
     </header>
 
+    <p><code>require</code> pulls the contents of the target PHP script into
+      current scope and evaluates it. Classes are <em>always</em> placed into
+      global scope; functions are only placed into global scope if they are not
+      scoped within the definition of a class or <a href="/function-expressions">another
+      function.</a></p>
+
     <p>If a given script file cannot be found, <code>include</code> will continue
       script execution with a warning, but <code>require</code> will cause a fatal
       error. If your program cannot continue in the absence of a particular file,

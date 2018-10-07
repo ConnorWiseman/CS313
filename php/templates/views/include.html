@@ -5,6 +5,12 @@
       <p class="accent-text">Ways to modularize PHP code.</p>
     </header>
 
+    <p><code>include</code> pulls the contents of the target PHP script into
+      current scope and evaluates it. Classes are <em>always</em> placed into
+      global scope; functions are only placed into global scope if they are not
+      scoped within the definition of a class or <a href="/function-expressions">another
+      function.</a></p>
+
     <aside>
       <h4>By The Way</h4>
       <p class="accent-text">There are few reasons to prefer <code>include</code>
