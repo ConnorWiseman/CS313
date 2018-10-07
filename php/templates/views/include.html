@@ -1,0 +1,30 @@
+<article id="include">
+  <div class="width-wrapper">
+    <header>
+      <h2>Include</h2>
+      <p class="accent-text">Ways to modularize PHP code.</p>
+    </header>
+
+    <aside>
+      <h4>By The Way</h4>
+      <p class="accent-text">There are few reasons to prefer <code>include</code>
+        over <a href="/require"><code>require</code></a>.</p>
+    </aside>
+
+    <div class="example">
+      <h3><code>include</code></h3>
+
+      <pre><code>include 'myFile.php';</code></pre>
+    </div>
+
+    <div class="example">
+      <h3><code>include_once</code></h3>
+
+      <pre><code>include_once 'myFile.php';</code></pre>
+
+      <p><code>include_once</code> will only include the target file if it has
+        not already been included in the current scope. This behavior is useful
+        for scripts that define functions.</p>
+    </div>
+  </div>
+</article>
