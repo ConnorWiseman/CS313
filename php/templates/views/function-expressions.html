@@ -49,6 +49,25 @@ $myFunc();</code></pre>
         pattern is especially useful in PHP for maintaining some semblance of
         scope with regards to functions not intended for exposure as part of a
         program's public API.</p>
+
+      <p>Note, however, that <em>all</em> functions are placed in global scope
+        in PHP. The only way to enforce a degree of scoping is with anonymous
+        functions assigned to variables:</p>
+
+      <pre><code>$var = (function() {
+  // an anonymous function executed immediately
+
+  function privateFunction() {
+    // a function inside IIFE
+  };
+
+  $privateFunction = function() {
+    // another function inside the IIFE
+  };
+})();
+
+privateFunction(); // no error
+$privateFunction(); // error</code></pre>
     </div>
   </div>
 </article>
